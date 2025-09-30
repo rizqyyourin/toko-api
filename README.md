@@ -78,9 +78,7 @@ Sistem API berbasis web menggunakan Rest-API Laravel untuk manajemen toko dengan
    php artisan serve
    ```
 
-## � Replikasi Data (Sama Persis Seperti di Repo Ini)
-
-Agar semua developer mendapatkan data yang sama tanpa perlu meminta file database, repo ini menyediakan seeders yang berisi data persis seperti database referensi.
+## Replikasi Data
 
 Jalankan perintah berikut untuk drop semua tabel, migrate ulang, dan seed data demo:
 
@@ -88,26 +86,7 @@ Jalankan perintah berikut untuk drop semua tabel, migrate ulang, dan seed data d
 php artisan db:refresh-seed
 ```
 
-Apa yang terjadi:
-- Menjalankan `migrate:fresh` (drop lalu recreate seluruh tabel)
-- Menjalankan `db:seed` (mengisi data Pelanggan, Barang, Penjualan, ItemPenjualan)
-
-Jika ingin langkah manual:
-```powershell
-php artisan migrate:fresh
-php artisan db:seed
-```
-
-Troubleshooting:
-- Error "Unknown database": buat database sesuai nilai `DB_DATABASE` di `.env` atau pakai user yang punya izin CREATE DATABASE.
-- Error kredensial: pastikan `DB_USERNAME`/`DB_PASSWORD` benar untuk server MySQL lokal.
-- Ingin cek cepat jumlah data:
-   ```powershell
-   php artisan tinker --execute="echo 'Pelanggan: ' . App\Models\Pelanggan::count(); echo ' Barang: ' . App\Models\Barang::count(); echo ' Penjualan: ' . App\Models\Penjualan::count();"
-   ```
-
-
-## �📚 API Documentation
+##📚 API Documentation
 
 Base URL: `http://localhost:8000/api`
 
