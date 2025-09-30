@@ -53,7 +53,7 @@ Sistem API berbasis web menggunakan Rest-API Laravel untuk manajemen toko dengan
 
 3. **Environment setup**
    ```bash
-   cp .env.example .env
+   copy .env.example .env
    php artisan key:generate
    ```
 
@@ -68,23 +68,18 @@ Sistem API berbasis web menggunakan Rest-API Laravel untuk manajemen toko dengan
    DB_PASSWORD=
    ```
 
-5. **Run migrations**
-   ```bash
-   php artisan migrate
-   ```
+5. **Replikasi Data**
+    Jalankan perintah berikut untuk drop semua tabel, migrate ulang, dan seed data demo:
+    
+    ```powershell
+    php artisan db:refresh-seed
+    ```
 
 6. **Start server**
    ```bash
    php artisan serve
    ```
 
-## Replikasi Data
-
-Jalankan perintah berikut untuk drop semua tabel, migrate ulang, dan seed data demo:
-
-```powershell
-php artisan db:refresh-seed
-```
 
 ## 📚 API Documentation
 
