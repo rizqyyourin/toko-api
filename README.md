@@ -69,8 +69,6 @@ Sistem API berbasis web menggunakan Rest-API Laravel untuk manajemen toko dengan
    ```
 
 5. **Replikasi Data**
-    Jalankan perintah berikut untuk drop semua tabel, migrate ulang, dan seed data demo:
-    
     ```powershell
     php artisan db:refresh-seed
     ```
