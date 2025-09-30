@@ -42,7 +42,7 @@ Sistem API berbasis web menggunakan Rest-API Laravel untuk manajemen toko dengan
 
 1. **Clone repository**
    ```bash
-   git clone https://github.com/rizqyyouin/toko-api.git
+   git clone https://github.com/rizqyyourin/toko-api.git
    cd toko-api
    ```
 
