@@ -42,7 +42,7 @@ Sistem API berbasis web menggunakan Rest-API Laravel untuk manajemen toko dengan
 
 1. **Clone repository**
    ```bash
-   git clone https://github.com/your-username/toko-api.git
+   git clone https://github.com/rizqyyourin/toko-api.git
    cd toko-api
    ```
 
@@ -53,7 +53,7 @@ Sistem API berbasis web menggunakan Rest-API Laravel untuk manajemen toko dengan
 
 3. **Environment setup**
    ```bash
-   cp .env.example .env
+   copy .env.example .env
    php artisan key:generate
    ```
 
@@ -68,46 +68,17 @@ Sistem API berbasis web menggunakan Rest-API Laravel untuk manajemen toko dengan
    DB_PASSWORD=
    ```
 
-5. **Run migrations**
-   ```bash
-   php artisan migrate
-   ```
+5. **Replikasi Data**
+    ```powershell
+    php artisan db:refresh-seed
+    ```
 
 6. **Start server**
    ```bash
    php artisan serve
    ```
 
-## Replikasi Data (Sama Persis Seperti di Repo Ini)
-
-Agar semua developer mendapatkan data yang sama tanpa perlu meminta file database, repo ini menyediakan seeders yang berisi data persis seperti database referensi.
-
-Jalankan perintah berikut untuk drop semua tabel, migrate ulang, dan seed data demo:
-
-```powershell
-php artisan db:refresh-seed
-```
-
-Apa yang terjadi:
-- Menjalankan `migrate:fresh` (drop lalu recreate seluruh tabel)
-- Menjalankan `db:seed` (mengisi data Pelanggan, Barang, Penjualan, ItemPenjualan)
-
-Jika ingin langkah manual:
-```powershell
-php artisan migrate:fresh
-php artisan db:seed
-```
-
-Troubleshooting:
-- Error "Unknown database": buat database sesuai nilai `DB_DATABASE` di `.env` atau pakai user yang punya izin CREATE DATABASE.
-- Error kredensial: pastikan `DB_USERNAME`/`DB_PASSWORD` benar untuk server MySQL lokal.
-- Ingin cek cepat jumlah data:
-   ```powershell
-   php artisan tinker --execute="echo 'Pelanggan: ' . App\Models\Pelanggan::count(); echo ' Barang: ' . App\Models\Barang::count(); echo ' Penjualan: ' . App\Models\Penjualan::count();"
-   ```
-
-
-## �📚 API Documentation
+## 📚 API Documentation
 
 Base URL: `http://localhost:8000/api`
 
