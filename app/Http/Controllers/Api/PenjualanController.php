@@ -20,7 +20,10 @@ class PenjualanController extends Controller
     public function index(): JsonResponse
     {
         try {
-            $penjualan = Penjualan::with(['pelanggan', 'itemPenjualan.barang'])->get();
+            // Menggunakan raw query untuk pengurutan yang efisien berdasarkan angka di id_nota
+            $penjualan = Penjualan::with(['pelanggan', 'itemPenjualan.barang'])
+                ->orderByRaw("CAST(SUBSTRING(id_nota, 6) AS UNSIGNED)")
+                ->get();
             
             return response()->json([
                 'success' => true,

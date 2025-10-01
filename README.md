@@ -78,7 +78,7 @@ Sistem API berbasis web menggunakan Rest-API Laravel untuk manajemen toko dengan
    php artisan serve
    ```
 
-## � Replikasi Data (Sama Persis Seperti di Repo Ini)
+## Replikasi Data (Sama Persis Seperti di Repo Ini)
 
 Agar semua developer mendapatkan data yang sama tanpa perlu meminta file database, repo ini menyediakan seeders yang berisi data persis seperti database referensi.
 

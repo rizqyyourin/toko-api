@@ -16,7 +16,8 @@ class BarangController extends Controller
     public function index(): JsonResponse
     {
         try {
-            $barang = Barang::all();
+            // Menggunakan raw query untuk pengurutan yang lebih efisien berdasarkan angka di kode
+            $barang = Barang::orderByRaw("CAST(SUBSTRING(kode, 5) AS UNSIGNED)")->get();
             
             return response()->json([
                 'success' => true,

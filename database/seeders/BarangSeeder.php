@@ -15,7 +15,6 @@ class BarangSeeder extends Seeder
     {
         DB::table('barang')->insert([
             ['kode' => 'BRG_1', 'nama' => 'PEN', 'kategori' => 'ATK', 'harga' => 15000],
-            ['kode' => 'BRG_10', 'nama' => 'PIRING', 'kategori' => 'RT', 'harga' => 35000],
             ['kode' => 'BRG_2', 'nama' => 'PENSIL', 'kategori' => 'ATK', 'harga' => 10000],
             ['kode' => 'BRG_3', 'nama' => 'PAYUNG', 'kategori' => 'RT', 'harga' => 70000],
             ['kode' => 'BRG_4', 'nama' => 'PANCI', 'kategori' => 'MASAK', 'harga' => 110000],
@@ -24,6 +23,7 @@ class BarangSeeder extends Seeder
             ['kode' => 'BRG_7', 'nama' => 'KUALI', 'kategori' => 'MASAK', 'harga' => 120000],
             ['kode' => 'BRG_8', 'nama' => 'SIKAT', 'kategori' => 'RT', 'harga' => 30000],
             ['kode' => 'BRG_9', 'nama' => 'GELAS', 'kategori' => 'RT', 'harga' => 25000],
+            ['kode' => 'BRG_10', 'nama' => 'PIRING', 'kategori' => 'RT', 'harga' => 35000],
         ]);
     }
 }

@@ -16,7 +16,8 @@ class PelangganController extends Controller
     public function index(): JsonResponse
     {
         try {
-            $pelanggan = Pelanggan::all();
+            // Menggunakan raw query untuk pengurutan yang lebih efisien
+            $pelanggan = Pelanggan::orderByRaw("CAST(SUBSTRING(id_pelanggan, 11) AS UNSIGNED)")->get();
             
             return response()->json([
                 'success' => true,
